@@ -20,9 +20,9 @@ echo '<table border="1">';
         <tr>
           <thead>';
     
-foreach($personas as $persona => $nombre) {
+foreach($personas as $key => $persona) {
         echo '<tr>';
-            echo "<td>".$nombre.'=>'.$persona."</td>";
+            echo "<td>".$key.'=>'.$persona."</td>";
         echo '</tr>';
 } 
 echo '</table>';
@@ -48,5 +48,8 @@ var_dump($contactos);
 
 echo $contactos[0]['nombre'];
 
-$encode = json_encode($contactos);
-$decode = json_decode($encode);
+foreach($contactos as $key => $contacto){
+    echo $contacto['nombre'].'<br>';
+}
+
+
