@@ -2,7 +2,7 @@
 
 
 
-$persona = array(
+$personas = array(
 
     'nombre' => 'Victor',
     'apellidos' => 'Robles',
@@ -12,3 +12,41 @@ $persona = array(
 
 
 var_dump($personas);
+
+echo '<table border="1">';
+    echo '<thead>
+        <tr>
+            <th>Nombre</th>
+        <tr>
+          <thead>';
+    
+foreach($personas as $persona => $nombre) {
+        echo '<tr>';
+            echo "<td>".$nombre.'=>'.$persona."</td>";
+        echo '</tr>';
+} 
+echo '</table>';
+
+
+//array Multidimensionales
+
+$contactos = array( 
+                array("nombre" => 'Javier',
+                    "email" => 'quiroga218@gmail.com'
+                ),
+                array("nombre" => 'Carlos',
+                    "email" => 'carlos218@gmail.com'
+                ),
+                array("nombre" => 'Hector',
+                    "email" => 'hector218@gmail.com'
+                    )
+
+
+);
+
+var_dump($contactos);
+
+echo $contactos[0]['nombre'];
+
+$encode = json_encode($contactos);
+$decode = json_decode($encode);
