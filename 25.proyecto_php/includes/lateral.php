@@ -1,18 +1,28 @@
 
 <aside id="sidebar">
+    <div id="login" class="bloque">
+            <h3>Buscar</h3>
+            <form action="buscar.php" method="POST">
+                <input type="text" name="busqueda" id="buscar" placeholder="Escribir aqui...">
+                <input type="submit" value="Buscar" />
+            </form>
+        </div>
+
+
 <?php if (isset($_SESSION['usuario'])) : ?>
     <div id="usuario_logueado" class="bloque">
         <h3><?= 'Hola, '.$_SESSION['usuario']['nombre'].' '.$_SESSION['usuario']['apellidos']?></h3>
         
         <a href="./crear_entrada.php" class="boton btn-info">Crear entradas</a>
         <a href="./crear_categoria.php" class="boton btn-info">Crear categorias</a>
-        <a href="./logout.php" class="boton btn-info"><i class="medium material-icons">person</i></a>
+        <a href="./mis-datos.php" class="boton btn-info"><i class="medium material-icons">person</i></a>
         <a href="./logout.php" class="boton btn-error"><i class="large material-icons">close</i> </a>
     </div>    
 <?php endif;?>
 
+
 <?php if (!isset($_SESSION['usuario'])) :  ?>
-    <div id="login.php" class="bloque">
+    <div id="login" class="bloque">
         <h3>Login</h3>
         <form action="login.php" method="POST">
         

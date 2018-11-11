@@ -283,7 +283,7 @@ p.exito {
 }
 
 .boton {
-    color: white;
+    color: white !important;
     font-size: 12pt;
     text-align: center;
     display: block;
@@ -300,18 +300,18 @@ p.exito {
 } 
 
 .btn-success:hover{
-    color: white;
+    color: white !important ;
     border: 1px solid green;
     transition: all 500ms;
 }
 
 
 .btn-error {
-    background: red;
+    background: red ;
 } 
 
 .btn-error:hover{
-    color:  red;
+    color:  red !important;
     border: 1px solid red;
     background: white;
     transition: all 500ms;
@@ -319,11 +319,11 @@ p.exito {
 }
 
 .btn-info {
-    background: rgba(4, 147, 241, 0.788);
+    background: rgba(4, 147, 241, 0.788) ;
 } 
 
 .btn-info:hover{
-    color:  rgba(4, 147, 241, 0.788);
+    color:  rgba(4, 147, 241, 0.788) !important;
     border: 1px solid rgba(4, 147, 241, 0.788);
     background: white;
     transition: all 500ms;

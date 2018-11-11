@@ -5,9 +5,10 @@
 <!--INCLUYE BARRA LATERAL CON PHP -->
 <?php require_once './includes/lateral.php';?>
     <!-- Caja principal -->
+
     <div id="principal">
-    <h1>Breaking News</h1>
-        <?php $entradas = conseguirEntradas(true);
+    <h1>Todas las noticias</h1>
+        <?php $entradas = conseguirEntradas();
         if(!empty($entradas)) :
          while($entrada = mysqli_fetch_assoc($entradas) ) :
         ?>
@@ -27,10 +28,6 @@
          endwhile;
         endif;
         ?>
-
-        <div id="ver-todas">
-            <a href="todasentradas.php">Ver todas las entradas</a>
-        </div>
 
     </div>
     <!-- pie de pagina -->
