@@ -1,0 +1,342 @@
+/*
+    Fuentes
+*/
+@font-face{
+    font-family: "fajala";
+    src:url('../fonts/fuente.ttf')format(truetype);
+    font-weight:normal;
+    font-style:normal;
+}
+
+*{
+    padding:0;
+    margin:0;
+    font-family: sans-serif, Helvetica, Arial;
+    text-decoration: none;
+}
+.clearfix{
+    clear:both;
+    float:none;
+}
+/*GENERALES*/
+
+body{
+    background: url(../img/cubes.png) #f4f4f4;
+
+}
+
+/*CABECERA*/
+
+#cabecera{
+    width: 85%;
+    height: auto;
+    background: transparent;
+    margin: 0px auto;
+}
+/*Logotipo*/
+#logo {
+    float: left;
+    width: 540px;
+    height: 110px;
+}
+
+#logo a{
+    font-family: "fajala", Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    letter-spacing: 2px;
+    color:#2979cd;
+    text-shadow: 0px 0px 0px black, 1px 1px 0px black, 2px 2px 0px black;
+    -moz-transform: all 500ms;
+    transition: all 500ms;
+    line-height: 90px;
+    margin-left: 10px;
+}
+
+#logo a:hover{
+    cursor: pointer;
+    text-shadow: 0px 0px 0px black, -1px -1px 0px black, -2px -2px 0px black;
+}
+
+/*MENU*/
+
+#menu{
+    clear:both;
+    width: 100%;
+    height: 45px;
+    background: linear-gradient(to bottom, #f9f9f9 0px, #e9e9e9 100%);
+    border: 1px solid #c9c9c9;
+    border-radius: 8px;
+    box-shadow: 0px 1px 1px #ccc;
+    overflow: hidden;
+
+}
+
+
+#menu ul{
+    list-style: none;
+}
+
+#menu ul li{
+    float:left;
+    line-height: 45px;
+    border-right: 1px solid #c9c9c9;
+   
+}
+
+
+#menu ul li a{
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 15px;
+    color: #6e6e6a;
+    font-weight: bold;
+}
+#menu ul li a:hover{
+    background: linear-gradient(to bottom, #f2f2f2 0px, #dad9d4 100%);
+}
+/*CONTENIDO PRINCICPAL*/
+
+#contenedor{
+    width: 85%;
+    height: auto;
+    min-height: auto;
+    margin: 0px auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/*
+    BARRA LATERAL
+*/
+#sidebar{
+    float: right;
+    width: 27%;
+    height:auto;
+}
+/*principal*/
+#principal{
+    float:left;
+    width: 65%;
+    min-height: 555px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #ccc;
+    margin-left: 20px;
+    padding: 20px;
+    overflow: hidden;
+    
+}
+#principal a{
+    color:#333;
+    text-align: justify;
+}
+#principal h1{
+    font-size:32px;
+    color: #444;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px #ccc;
+    font-family: "fajala";
+    text-align: justify;
+}
+
+#principal p{
+    margin-top: 8px;
+    text-align: justify;
+}
+
+#principal h2 {
+    font-size:25px;
+    letter-spacing: 1px;
+    font-family: "fajala";
+    margin-top:10px;
+    color:#2979cd;
+    text-shadow: 1px 1px 2px #ccc;
+}
+#ver-todas a{
+    color: white;
+    display: block;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 4px;
+    padding: 15px;
+    background: #007ee5;
+    border: 1px solid #156785;
+    width: 160px;
+    margin: 0px auto;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+#ver-todas a:hover{
+    color: #007ee5;
+    background: white;
+    font-weight: bold;
+    
+}
+
+/*Bloques*/
+
+.bloque {
+    display: block;
+    width: 90%;
+    margin: 0px auto;
+    margin-bottom: 35px;
+    background: #ffff;
+    padding:15px;
+    box-shadow: 0px 0px 1px  #aaaaaa, 0px 3px 7px  #aaaaaa, 0px 0px 1px  #FFF inset,  0px -3px 2px  #FFF inset;
+}
+
+.bloque h3{
+    margin-bottom:7px;
+}
+
+label,
+input[type="text"],
+input[type="email"],
+input[type="password"]{
+    display: block;
+    width: 95%;
+    margin-bottom: 2px;
+    padding: 5px;
+   
+
+}
+
+label,
+input[type="text"],
+input[type="email"],
+input[type="password"]:active{
+    display: block;
+    width: 95%;
+    margin-bottom: 2px;
+    padding: 5px;
+    outline: 0px;
+}
+
+
+
+
+input[type="button"],
+input[type="submit"]{
+    color: white;
+    display: block;
+    font-size: 15px;
+    border-radius: 4px;
+    padding: 7px;
+    background: #007ee5;
+    border: 1px solid #156785;
+    width: 100px;
+    margin: 0px auto;
+    cursor: pointer;
+    margin-top: 5px;
+    
+}
+
+input[type="button"],
+input[type="submit"]:hover{
+    color: #007ee5;
+    background:  white;;
+}
+
+/*pie de pagina*/
+
+#footer{
+    width: 85%;
+    clear:both;
+    margin: 0px auto;
+    background: linear-gradient(to bottom, #f9f9f9 0px, #e9e9e9 100%);
+    border:1px solid #c9c9c9;
+    border-bottom:none;
+    border-radius: 8px 8px 0px 0px;
+    color:#666;
+    height: auto;
+    padding: 15px;
+}
+
+
+ p.errores{
+    color: rgb(241, 6, 6);
+    padding: 5px;
+    border: 1px solid rgb(241, 6, 6);
+    background: rgba(235, 113, 113, 0.473);
+    font-size: 12px;
+    font-weight: bold;
+    list-style: square;
+    content:'x';
+    display: block;
+    transition: all 600ms;
+
+}
+
+p.exito {
+    color: green;
+    padding: 8px;
+    border: 1px solid rgb(6, 241, 104);
+    background: rgba(138, 229, 176, 0.384);
+    font-size: 12px;
+    font-weight: bold;
+    list-style: square;
+    content:'x';
+    display: block;
+    transition: all 600ms;
+}
+
+.boton {
+    color: white;
+    font-size: 12pt;
+    text-align: center;
+    display: block;
+    background: gainsboro;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 6px;
+    width: 120px;
+}
+
+.btn-success {
+    background: green;
+} 
+
+.btn-success:hover{
+    color: white;
+    border: 1px solid green;
+    transition: all 500ms;
+}
+
+
+.btn-error {
+    background: red;
+} 
+
+.btn-error:hover{
+    color:  red;
+    border: 1px solid red;
+    background: white;
+    transition: all 500ms;
+
+}
+
+.btn-info {
+    background: rgba(4, 147, 241, 0.788);
+} 
+
+.btn-info:hover{
+    color:  rgba(4, 147, 241, 0.788);
+    border: 1px solid rgba(4, 147, 241, 0.788);
+    background: white;
+    transition: all 500ms;
+
+}
+
+.fecha-entrada {
+  color:grey;
+  margin-top:5px;
+  font-size:10pt;
+
+}
+
+select{
+    padding: auto;
+    
