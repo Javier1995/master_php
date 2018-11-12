@@ -60,7 +60,13 @@ class Persona {
 class Informatico extends Persona {
 
     public $lenguaje;
+    public $experienciaProgramador;
 
+    public function __construct()
+    {
+        $this->lenguaje = ['html','php', 'sql'];
+        $this->experienciaProgramador = 12;
+    }
 
     public function programar() 
     {
@@ -76,9 +82,27 @@ class Informatico extends Persona {
     {
         return "Estoy escribiendo en word";
     }
-    public function setLenguajes($lenguaje)
+    public function sabeLenguajes(Array $lenguaje)
     {
         $this->lenguaje = $lenguaje;
     }
+
+}
+
+class TecnicoRedes extends Informatico {
+    
+    public $auditoria;
+
+    public function __construct()
+    {   parent::__construct();
+        $this->auditoria = "experto";
+        $this->experienciaProgramador = 12;
+    }
+
+    public function auditar()
+    {   
+        return $this->auditoria = "Estou auditando";
+    }
+
 
 }
