@@ -63,6 +63,10 @@ echo $coche->acelerar().'<br>';
 echo $coche->acelerar().'<br>';
 echo $coche->acelerar().'<br>';
 echo $coche->frenar().'<br>';
+echo $coche->frenar().'<br>';
+echo $coche->frenar().'<br>';
+echo $coche->frenar().'<br>';
+echo $coche->frenar().'<br>';
 
 echo $coche->getSpeed();
 
