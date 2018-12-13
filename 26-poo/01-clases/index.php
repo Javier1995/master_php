@@ -26,6 +26,7 @@ class Coche {
         return $this->color = $color;
     }
 
+   //Este es un nuevo metodo para acelerar los el valor de velocidad
     public function acelerar()
     {
         return $this->velocidad++;
