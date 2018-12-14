@@ -9,7 +9,7 @@ class Coche {
     //PUBLIC: Podemos acceder desde cualquier lugar, dentro de la clase actual
     //dentro de clases que hereden esta clase o fuera de la clase
     public $color;
-    //PROTECTED: Se accede desde la clse que lo definen y desde clases que hereden esta clase
+    //PROTECTED: Se accede desde la clase que lo definen y desde clases que hereden esta clase
     protected $marca;
     //PRIVATE: Se puede acceder desde esta clase
     private $model;
