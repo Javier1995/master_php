@@ -1,19 +1,12 @@
 <?php
+
 require_once 'coche.php';
 /**
  * Esta es una instancia del coche
  * 
  * 
  */
-
-$coche  = new Coche(
-                   "rojo", 
-                   "dogde", 
-                   "vg", 
-                    1212, 
-                    122, 
-                    122
-             );
+$coche = new Coche("rojo", "dogde", "vg", 1212, 122, 122);
 
 $coche2 = new Coche("verde", "dogde", "vg", 1212, 122, 122);
 
@@ -30,7 +23,7 @@ $coche->setMarca('nissan');
 $coche->getModel();
 $valor = 11;
 echo $coche->mostrarInformacion(
-    $valor
+        $valor
 );
 
 /* $array = get_object_vars($coche2);

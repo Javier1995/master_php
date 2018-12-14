@@ -5,7 +5,6 @@
 class Coche {
 
     //Atributos o propiedades($variables)
-
     //PUBLIC: Podemos acceder desde cualquier lugar, dentro de la clase actual
     //dentro de clases que hereden esta clase o fuera de la clase
     public $color;
@@ -13,80 +12,69 @@ class Coche {
     protected $marca;
     //PRIVATE: Se puede acceder desde esta clase
     private $model;
-
     public $velocidad;
     public $caballaje;
-    public $plazas ;
-
-
-    public function __construct($color = 'rojo', $marca = 'Ford', $model = 'v4', $velocidad = 11, $caballaje= 11, $plazas = 12)
-    {
-        $this->color  = $color;
-        $this->marca  = $marca;
+    public $plazas;
+    
+    public function __construct($color = 'rojo', $marca = 'Ford', $model = 'v4', $velocidad = 11, $caballaje = 11, $plazas = 12) {
+        $this->color = $color;
+        $this->marca = $marca;
         $this->model = $model;
         $this->velocidad = $velocidad;
         $this->caballaje = $caballaje;
         $this->plazas = $plazas;
     }
 
-   /*  Metodos, son acciones que hacer el objeto(Antes conocidos como funciones) */
-    public function getColor()
-    {
+    /*  Metodos, son acciones que hacer el objeto(Antes conocidos como funciones) */
+
+    public function getColor() {
         //Busca en esta clase la propiedad x
         return $this->color;
-    } 
+    }
 
-    public function setColor($color)
-    {
+    public function setColor($color) {
         //Busca en esta clase la propiedad x
         return $this->color = $color;
     }
 
-    public function acelerar()
-    {
+    public function acelerar() {
         return $this->velocidad++;
     }
 
-    public function frenar()
-    {
+    public function frenar() {
         return $this->velocidad--;
     }
 
-    public function getSpeed()
-    {
+    public function getSpeed() {
         return $this->velocidad;
     }
 
-    public function setModel($model)
-    {
+    public function setModel($model) {
         $this->model = $model;
     }
 
-    public function getModel()
-    {
+    public function getModel() {
         return $this->model;
     }
-    public function setMarca($marca)
-    {
+
+    public function setMarca($marca) {
         $this->marca = $marca;
     }
 
-
-    public function getMarca()
-    {
+    public function getMarca() {
         return $this->marca;
     }
 
-    public function mostrarInformacion($miObjeto)
-    {
-        if ( is_object($miObjeto) ) {
-            $informacion  = "<h1>Información del coche</h1>";
-            $informacion .= "Modelo: ".$miObjeto->model.'<br>';
-            $informacion .= "color:  ".$miObjeto->color.'<br>';
-            $informacion .= "velocidad: ".$miObjeto->velocidad.'<br>';
+    public function mostrarInformacion($miObjeto) {
+        if (is_object($miObjeto)) {
+            $informacion = "<h1>Información del coche</h1>";
+            $informacion .= "Modelo: " . $miObjeto->model . '<br>';
+            $informacion .= "color:  " . $miObjeto->color . '<br>';
+            $informacion .= "velocidad: " . $miObjeto->velocidad . '<br>';
         } else {
-            $informacion ="Tu dato es este: $miObjeto";
+            $informacion = "Tu dato es este: $miObjeto";
         }
         return $informacion;
     }
+
 }
