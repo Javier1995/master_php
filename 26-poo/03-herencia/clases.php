@@ -5,14 +5,12 @@
 
 class Persona {
 
-
     public $nombre;
     public $apellido;
     public $altura;
     public $edad;
 
-
-    public function setNombre($nombre) { 
+    public function setNombre($nombre) {
         $this->nombre = $nombre;
     }
 
@@ -27,9 +25,9 @@ class Persona {
     public function setEdad($edad) {
         $this->edad = $edad;
     }
-    
-    public function getNombre() { 
-       return $this->nombre;
+
+    public function getNombre() {
+        return $this->nombre;
     }
 
     public function getApellido($apellido) {
@@ -44,16 +42,13 @@ class Persona {
         return $this->edad;
     }
 
-    public function hablar()
-    {
+    public function hablar() {
         return "Estoy hablando";
     }
 
-    public function caminar()
-    {
+    public function caminar() {
         return "Estoy caminando";
     }
-
 
 }
 
@@ -62,47 +57,41 @@ class Informatico extends Persona {
     public $lenguaje;
     public $experienciaProgramador;
 
-    public function __construct()
-    {
-        $this->lenguaje = ['html','php', 'sql'];
+    public function __construct() {
+        $this->lenguaje = ['html', 'php', 'sql'];
         $this->experienciaProgramador = 12;
     }
 
-    public function programar() 
-    {
+    public function programar() {
         return "Soy programador";
     }
 
-    public function repararOrdenador()
-    {
+    public function repararOrdenador() {
         return "Estoy reparando una maquinda";
     }
 
-    public function hacerOfimatica()
-    {
+    public function hacerOfimatica() {
         return "Estoy escribiendo en word";
     }
-    public function sabeLenguajes(Array $lenguaje)
-    {
+
+    public function sabeLenguajes(Array $lenguaje) {
         $this->lenguaje = $lenguaje;
     }
 
 }
 
 class TecnicoRedes extends Informatico {
-    
+
     public $auditoria;
 
-    public function __construct()
-    {   parent::__construct();
+    public function __construct() {
+        parent::__construct();
         $this->auditoria = "experto";
         $this->experienciaProgramador = 12;
     }
 
-    public function auditar()
-    {   
+    public function auditar() {
         return $this->auditoria = "Estou auditando";
     }
-
 
 }
