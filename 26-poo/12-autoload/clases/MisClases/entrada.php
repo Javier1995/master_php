@@ -7,18 +7,21 @@
  */
 
 /**
- * Description of Categoria
+ * Description of entrada
  *
  * @author Sandy
  */
-class Categoria {
 
-    public $nombre;
-    public $descripcion;
+namespace MisClases;
+
+class Entrada {
+
+    public $titulo;
+    public $fecha;
 
     public function __construct() {
-        $this->nombre = "Accion";
-        $this->descripcion = "Categoria enfocada a las review de videojuegos de accion";
+        $this->titulo = "Review de GTA 5";
+        $this->fecha = "12/12/12";
     }
 
 }

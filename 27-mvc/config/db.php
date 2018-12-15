@@ -7,16 +7,16 @@
  */
 
 /**
- * Description of Usuario
+ * Description of db
  *
  * @author Sandy
  */
-class Usuario {
-    public $nombre;
-    public $email;
-    
-    public function __construct() {
-        $this->nombre = "Javier";
-        $this->email = "Javie@gmail.com";
+class db {
+
+    public static function conectar() {
+        $conexion = new mysqli("localhost", "root", "", "nota_master");
+        $conexion->query("SET NAMES 'utf8'");
+        return $conexion;
     }
+
 }
