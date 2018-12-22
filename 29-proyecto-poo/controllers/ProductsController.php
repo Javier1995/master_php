@@ -16,10 +16,21 @@ require_once 'models/Product.php';
 class ProductsController {
 
     public function index() {
-        
+
         $producto = new Product();
         $productos = $producto->getRandom(6);
         require_once 'views/producto/descatacados.php';
+    }
+
+    public function show() {
+        if (filter_input(INPUT_GET, 'id', FILTER_SANITIZE_STRING)) {
+            $id = filter_input(INPUT_GET, 'id');
+            $product = new Product();
+            $product->setId($id);
+            $pro = $product->getOne();
+           
+        } 
+         require_once 'views/producto/show.php';
     }
 
     public function gestion() {
@@ -58,13 +69,13 @@ class ProductsController {
 
                 //GUARDAR LA IMAGEN
                 //             
-                if(!empty($_FILES['image']['name'])) {
+                if (!empty($_FILES['image']['name'])) {
                     $file = $_FILES['image'];
                     $filename = $file['name'];
                     $extension = explode('.', $filename);
                     $new_filename = sha1($filename) . rand(1, 200) . '.' . $extension[1];
                     echo $new_filename;
-                    
+
                     $mimetype = $file['type'];
                     $dir = 'uploads/images';
                     $tmp_file = $file['tmp_name'];
@@ -78,19 +89,17 @@ class ProductsController {
                         $producto->setImagen($new_filename);
                     }
                 }
-                
-             
-                if(filter_input(INPUT_GET, 'id', FILTER_SANITIZE_STRING)){
-                   
+
+
+                if (filter_input(INPUT_GET, 'id', FILTER_SANITIZE_STRING)) {
+
                     $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_STRING);
                     $producto->setId($id);
                     $save = $producto->edit();
-                    
-                
                 } else {
                     $save = $producto->Save();
                 }
-                
+
                 if ($save) {
                     $_SESSION['producto'] = "complete";
                 } else {

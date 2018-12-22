@@ -1,10 +1,14 @@
 
 <?php if (isset($edit) && $edit && isset($productos) && is_object($productos)): ?>
     <h1>Editar producto <?= $productos->nombre; ?></h1>
-    <?php $url_action = BASE_URL . "products/save&id=" . $productos->id; ?>
+    <?php $url_action = BASE_URL . "products/save&id=" . $productos->id; 
+          $button_name = "Update";
+    ?>
 <?php else: ?>   
     <h1>Crear nuevos productos</h1>
-    <?php $url_action = BASE_URL . "products/save" ?>
+    <?php $url_action = BASE_URL . "products/save";
+           $button_name = "Save";        
+    ?>
 <?php endif; ?>
 <form action="<?= $url_action ?>" method="POST" enctype="multipart/form-data">
 
@@ -33,6 +37,6 @@
         <img src="<?= isset($edit) ? BASE_URL . "uploads/images/" . $productos->imagen : ''; ?>" alt="Foto" class="img-producto">
     <?php endif; ?>
     <input  type="file" name="image">
-    <button class="button" type="submit">Update</button>
+    <button class="button" type="submit"><?=$button_name?></button>
 
 </form>

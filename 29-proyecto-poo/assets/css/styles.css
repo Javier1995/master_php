@@ -298,6 +298,7 @@ input[type="submit"]:hover{
     border-right: 1px solid #ccc;
     text-align: center;
 
+
 }
 
 .product h2{
@@ -325,7 +326,8 @@ input[type="submit"]:hover{
     color: #555555;
 }
 .product img {
-    width: 100px;
+    width:100px;
+    height:100px;
 }
 #logo a:hover{
     text-shadow: 0px 2px 1px #222 , 0px 0px 4px #01B1EA;
@@ -411,4 +413,26 @@ a.button, button.button {
     width: 300px;
     display: block;
     float: inside;
+}
+
+.precio-detalle{
+    text-align: left;
+    font-size: 20px;
+    color: #363636;
+    margin-left: 77px;
+}
+
+.img-detalle{
+    width: 30%;
+}
+
+.descripcion{
+    display: block;
+    width: 60%;
+    display: inline-block;
+    text-align: justify;
+}
+
+.detail .button {
+    width: 30%;
 }

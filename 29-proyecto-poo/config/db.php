@@ -7,6 +7,7 @@
  *
  * @author Javier Quiroga Almeida
  */
+
 @session_start();
 class Database {
 

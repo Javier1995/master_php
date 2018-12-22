@@ -15,7 +15,7 @@
             <header id="header">
                 <div id="logo">
                     <img src="<?= BASE_URL ?>assets/img/camiseta.png" alt="Camiseta Logo">
-                    <a href="./">
+                    <a href="<?= BASE_URL ?>">
                         Tienda de Camisetas
                     </a>
                 </div>
@@ -26,7 +26,7 @@
                     <?php $categorias = Utils::ShowCategories(); ?>
                     <li><a href="<?= BASE_URL ?>">Inicio</a></li>
                     <?php while ($category = $categorias->fetch_object()): ?>
-                        <li><a href="../"><?= $category->nombre ?></a></li>
+                        <li><a href="<?=BASE_URL.'category/show&id='.$category->id?>"><?= $category->nombre ?></a></li>
                     <?php endwhile; ?>
                 </ul>
 

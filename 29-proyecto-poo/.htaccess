@@ -10,3 +10,7 @@ RewriteRule ^(.*)/(.*) ./?controller=$1&action=$2
 
 </IfModule>
 
+<Files ~ “^w+.(gif|jpe?g|png)$”>
+    order deny,allow
+    allow from all
+</Files>

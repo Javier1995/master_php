@@ -54,5 +54,11 @@ class Category {
 
         return $result;
     }
+    
+    public function getOne() {
+        $category = $this->db->query("SELECT * FROM categorias WHERE id={$this->getId()}");
+
+        return $category->fetch_object();
+    }
 
 }

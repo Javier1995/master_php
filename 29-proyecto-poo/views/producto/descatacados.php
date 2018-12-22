@@ -3,9 +3,11 @@
 
 <?php while ($pro = $productos->fetch_object()): ?>
     <div class="product">
-        <img src="<?= BASE_URL ?>uploads/images/<?= $pro->imagen ?>" alt="Camista">
-        <h2><?= $pro->nombre ?></h2>
-        <p>$ <?= $pro->precio ?></p>
-        <a href="">Comprar</a>
+        <a href="<?= BASE_URL ?>Products/show&id=<?= $pro->id ?>">
+            <img src="<?= BASE_URL ?>uploads/images/<?= $pro->imagen ?>" alt="Camista">
+            <h2><?= $pro->nombre ?></h2>
+        </a>
+        <p>$<?= $pro->precio ?></p>
+        <a href="<?= BASE_URL ?>car/add&id=<?= $pro->id ?>">Comprar</a>
     </div>
 <?php endwhile; ?>
