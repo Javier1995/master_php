@@ -436,3 +436,25 @@ a.button, button.button {
 .detail .button {
     width: 30%;
 }
+
+
+.btn-pedidos{
+    display: block;
+    float:right;
+    background: rgb(0,143, 57);
+    width: 100%;
+    
+}
+
+.price-text{
+    display: block;
+    float: left;
+    
+}
+
+.cart-total{
+    display: block;
+    float:right;
+    margin-top: 10px;
+    width: 295px;
+}

@@ -33,6 +33,7 @@
         <tr>
             <th>#</th>
             <th>Nombre</th>
+            <th>Imagen</th>
             <th>Precio</th>
             <th>Stock</th>
             <th>ACCIONES</th>
@@ -44,6 +45,7 @@
             <tr>
                 <td><?= $pro->id; ?></td>
                 <td><?= $pro->nombre; ?></td>
+                <td> <img src="<?= BASE_URL.'uploads/images/'.$pro->imagen; ?>" alt="<?= $pro->nombre; ?>" height="90" > </td>
                 <td><?= $pro->precio; ?></td>
                 <td><?= $pro->stock; ?></td>
 

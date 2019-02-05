@@ -37,4 +37,48 @@ class Utils {
         
         return $category;
     }
+    
+    public static  function statsCart(){
+        $stats = [
+            'count'=>0,
+            'total'=>0
+        ];
+        if(isset($_SESSION['car'])){
+            
+            $stats['count'] = count($_SESSION['car']);
+            
+            foreach ($_SESSION['car'] as $index=> $value){
+            
+                $stats['total']+= $value['precio'] * $value['unidad'];
+                
+            }
+            
+            
+        }
+        
+        return $stats;
+    }
+    
+      public static function isIdentity(){
+        
+        if(!isset($_SESSION['identity'])){
+            header("Location:".BASE_URL);
+        } else {
+            return true;
+        }
+    }
+    
+    public static function showEstado($status){
+        $value = 'Pediente';
+        if($status == 'confirm'){
+             $value = 'Pediente';
+        }elseif($status == 'preparation'){
+              $value = 'En preparación';
+        }elseif($status == 'ready'){
+              $value = 'Preparado Para enviar';
+        }elseif($status=='sent'){
+            $value = 'Enviado';
+        }
+        return $value;
+    }
 }

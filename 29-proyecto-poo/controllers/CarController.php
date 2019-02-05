@@ -16,8 +16,10 @@ require_once 'models/product.php';
 class CarController {
 
     public function index() {
+        
         require_once 'views/cart/show.php';
-        echo "Controlador Carrito, Accion Index";
+        
+        
     }
 
     /*
@@ -69,6 +71,7 @@ class CarController {
 
     public function deleteAll() {
         unset($_SESSION['car']);
+         header("Location:" . BASE_URL . "car/index");
     }
 
 }

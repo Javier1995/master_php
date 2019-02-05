@@ -8,7 +8,7 @@
  * @author Javier Quiroga Almeida
  */
 
-@session_start();
+session_start();
 class Database {
 
     const HOST = "localhost";
